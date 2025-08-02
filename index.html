@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URANUS - The Ultimate Solana Memecoin</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-planet-ringed"></i>
+                <span>URANUS</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#analytics">Anal-ytics</a>
+                <a href="#about">About</a>
+                <a href="#community">Community</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+        
+        <div class="hero-content">
+            <div class="planet-container">
+                <div class="uranus-planet">
+                    <div class="rings"></div>
+                </div>
+            </div>
+            
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">URANUS</span>
+                </h1>
+                <p class="hero-subtitle">The Ultimate Solana Memecoin</p>
+                <p class="hero-description">
+                    Launched on Jupiter Studio - Because your portfolio needs a little Uranus in it! 🪐
+                </p>
+                
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="copyContract()">
+                        <i class="fas fa-copy"></i>
+                        Copy Contract
+                    </button>
+                    <button class="btn-secondary" onclick="openJupiter()">
+                        <i class="fas fa-rocket"></i>
+                        Trade on Jupiter
+                    </button>
+                </div>
+                
+                <div class="contract-address">
+                    <span>Contract: BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="floating-elements">
+            <div class="asteroid asteroid-1"></div>
+            <div class="asteroid asteroid-2"></div>
+            <div class="asteroid asteroid-3"></div>
+            <div class="comet"></div>
+        </div>
+    </section>
+
+    <!-- Anal-ytics Dashboard Section -->
+    <section id="analytics" class="analytics-section">
+        <div class="analytics-container">
+            <h2 class="section-title gradient-text">Anal-ytics IRL Leaderboard</h2>
+            <p class="section-subtitle">Real-time Uranus token statistics and community insights</p>
+            
+            <!-- Top Stats Cards -->
+            <div class="top-stats-grid">
+                <div class="stat-card premium" data-aos="fade-up">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value" id="marketCap">$0</h3>
+                        <p class="stat-label">Market Cap</p>
+                        <div class="stat-change positive" id="marketCapChange">+0.00%</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card premium" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value" id="totalSupply">0</h3>
+                        <p class="stat-label">Total Supply</p>
+                        <div class="stat-change" id="totalSupplyChange">Circulating</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card premium" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value" id="holders">0</h3>
+                        <p class="stat-label">Holders</p>
+                        <div class="stat-change positive" id="holdersChange">+0</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card premium" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value" id="transactions">0</h3>
+                        <p class="stat-label">Transactions</p>
+                        <div class="stat-change positive" id="transactionsChange">+0</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Analytics Dashboard Grid -->
+            <div class="analytics-grid">
+                <!-- Volume Chart -->
+                <div class="analytics-card volume-chart" data-aos="fade-up">
+                    <div class="card-header">
+                        <h3>Volume Flowing Through Uranus Today</h3>
+                        <div class="card-actions">
+                            <button class="time-filter active" data-period="24h">24H</button>
+                            <button class="time-filter" data-period="7d">7D</button>
+                            <button class="time-filter" data-period="30d">30D</button>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="volumeChart"></canvas>
+                    </div>
+                    <div class="chart-stats">
+                        <div class="chart-stat">
+                            <span class="label">Total Volume:</span>
+                            <span class="value" id="totalVolume">$0</span>
+                        </div>
+                        <div class="chart-stat">
+                            <span class="label">Avg Volume:</span>
+                            <span class="value" id="avgVolume">$0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Top Wallets Leaderboard -->
+                <div class="analytics-card leaderboard" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-header">
+                        <h3>Top Wallets Inside Uranus</h3>
+                        <div class="refresh-btn" onclick="refreshLeaderboard()">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                    </div>
+                    <div class="leaderboard-container">
+                        <div class="leaderboard-header">
+                            <span class="rank">Rank</span>
+                            <span class="wallet">Wallet</span>
+                            <span class="balance">Balance</span>
+                            <span class="percentage">%</span>
+                        </div>
+                        <div class="leaderboard-list" id="topWalletsList">
+                            <!-- Top wallets will be populated here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Holder Growth Chart -->
+                <div class="analytics-card holder-growth" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-header">
+                        <h3>Wallets Holder Growth</h3>
+                        <div class="growth-indicator">
+                            <span class="growth-value" id="growthRate">+0%</span>
+                            <span class="growth-period">vs yesterday</span>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="holderGrowthChart"></canvas>
+                    </div>
+                    <div class="growth-stats">
+                        <div class="growth-stat">
+                            <span class="label">New Holders:</span>
+                            <span class="value" id="newHolders">0</span>
+                        </div>
+                        <div class="growth-stat">
+                            <span class="label">Active Wallets:</span>
+                            <span class="value" id="activeWallets">0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Price Performance -->
+                <div class="analytics-card price-performance" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-header">
+                        <h3>Price Performance</h3>
+                        <div class="price-change">
+                            <span class="current-price" id="currentPrice">$0.0000</span>
+                            <span class="price-change-value" id="priceChange">+0.00%</span>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="priceChart"></canvas>
+                    </div>
+                    <div class="price-stats">
+                        <div class="price-stat">
+                            <span class="label">24H High:</span>
+                            <span class="value" id="high24h">$0.0000</span>
+                        </div>
+                        <div class="price-stat">
+                            <span class="label">24H Low:</span>
+                            <span class="value" id="low24h">$0.0000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Real-time Activity Feed -->
+            <div class="activity-feed" data-aos="fade-up">
+                <div class="feed-header">
+                    <h3>Live Uranus Activity</h3>
+                    <div class="feed-controls">
+                        <button class="feed-filter active" data-type="all">All</button>
+                        <button class="feed-filter" data-type="buys">Buys</button>
+                        <button class="feed-filter" data-type="sells">Sells</button>
+                        <button class="feed-filter" data-type="transfers">Transfers</button>
+                    </div>
+                </div>
+                <div class="feed-container" id="activityFeed">
+                    <!-- Activity items will be populated here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <h2 class="section-title">About Uranus</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Why Uranus?</h3>
+                    <p>
+                        Because sometimes you need to think outside the box... or in this case, outside the solar system! 
+                        Uranus is the seventh planet from the Sun and the third-largest by diameter. Just like our token, 
+                        it's unique, mysterious, and definitely worth exploring! 🪐
+                    </p>
+                    
+                    <h3>Tokenomics</h3>
+                    <ul>
+                        <li>Total Supply: 1,000,000,000 URANUS</li>
+                        <li>Liquidity: Locked on Jupiter</li>
+                        <li>Tax: 0% (Because we're not greedy!)</li>
+                        <li>Contract: Verified & Audited</li>
+                    </ul>
+                    
+                    <h3>Community</h3>
+                    <p>
+                        Join our growing community of Uranus enthusiasts! We're building something special here, 
+                        and we want you to be part of this cosmic journey. Remember, the best memes come from 
+                        the best communities! 🚀
+                    </p>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="solar-system">
+                        <div class="sun"></div>
+                        <div class="orbit orbit-1">
+                            <div class="planet planet-1"></div>
+                        </div>
+                        <div class="orbit orbit-2">
+                            <div class="planet planet-2"></div>
+                        </div>
+                        <div class="orbit orbit-3">
+                            <div class="planet planet-3"></div>
+                        </div>
+                        <div class="orbit orbit-4">
+                            <div class="planet planet-4"></div>
+                        </div>
+                        <div class="orbit orbit-5">
+                            <div class="planet planet-5"></div>
+                        </div>
+                        <div class="orbit orbit-6">
+                            <div class="planet planet-6"></div>
+                        </div>
+                        <div class="orbit orbit-7">
+                            <div class="planet planet-7 uranus-highlight"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="community-section">
+        <div class="community-container">
+            <h2 class="section-title">Join the Uranus Community</h2>
+            
+            <div class="social-links">
+                <a href="#" class="social-card twitter">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </a>
+                
+                <a href="#" class="social-card telegram">
+                    <i class="fab fa-telegram"></i>
+                    <span>Telegram</span>
+                </a>
+                
+                <a href="#" class="social-card discord">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                </a>
+                
+                <a href="#" class="social-card reddit">
+                    <i class="fab fa-reddit"></i>
+                    <span>Reddit</span>
+                </a>
+            </div>
+            
+            <div class="community-stats">
+                <div class="community-stat">
+                    <i class="fas fa-rocket"></i>
+                    <span>Launch Date: Coming Soon</span>
+                </div>
+                <div class="community-stat">
+                    <i class="fas fa-globe"></i>
+                    <span>Network: Solana</span>
+                </div>
+                <div class="community-stat">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Contract: Verified</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-planet-ringed"></i>
+                <span>URANUS</span>
+            </div>
+            <p>&copy; 2024 Uranus Token. To the moon and beyond! 🚀</p>
+        </div>
+    </footer>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-planet"></div>
+            <h2>Loading Uranus...</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
