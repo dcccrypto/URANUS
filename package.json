@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "build": "echo 'Build completed - static files ready for deployment'",
-    "vercel-build": "npm run build",
+    "build": "echo 'Static files ready for deployment'",
+    "vercel-build": "echo 'Build completed successfully'",
     "preview": "python -m http.server 8000"
   },
   "dependencies": {
@@ -19,7 +19,7 @@
     "nodemon": "^2.0.22"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "18.x"
   },
   "keywords": [
     "uranus",
