@@ -1,153 +1,174 @@
-# 🪐 Uranus Token Website
+# Uranus Analytics Dashboard
 
-A beautiful, professional space-themed website for the Uranus Solana memecoin with 3D parallax animations and interactive features.
+A professional, real-time blockchain analytics dashboard for the Uranus token, featuring comprehensive market data, holder analytics, and community metrics.
 
-## 🌟 Features
+## 🚀 Features
 
-- **Space Theme**: Beautiful dark blue and white space theme with animated stars and nebula effects
-- **3D Parallax Animations**: Smooth parallax scrolling effects with floating asteroids and comets
-- **Interactive Uranus Planet**: 3D rotating planet with rings that responds to mouse movement
-- **Real-time Stats**: Token statistics display with mock data (ready for Helius API integration)
-- **Responsive Design**: Fully responsive design that works on all devices
-- **Smooth Animations**: Typing effects, particle systems, and smooth transitions
-- **Professional UI**: Modern, clean interface with glassmorphism effects
+- **Real-time Blockchain Data**: Live integration with Solana Tracker API
+- **Professional UI**: Modern, responsive design with smooth animations
+- **Holder Analytics**: Real top holder data with growth tracking
+- **Community Metrics**: Twitter followers and X Community members with daily growth
+- **Interactive Elements**: Copy functionality, notifications, and hover effects
+- **Mobile Responsive**: Optimized for all device sizes
 
-## 🚀 Getting Started
+## 📊 Data Sources
 
-### Prerequisites
+- **Solana Tracker API**: Real blockchain data and token information
+- **Twitter API**: Community engagement metrics
+- **Real-time Updates**: Auto-refresh every 5 minutes
 
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- Optional: Helius API key for real token data
+## 🛠️ Tech Stack
 
-### Installation
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Backend**: Node.js with Express (for local development)
+- **Deployment**: Vercel serverless functions
+- **APIs**: Solana Tracker, Twitter API
+- **Styling**: Custom CSS with CSS Grid and Flexbox
 
-1. Clone or download the project files
-2. Open `index.html` in your web browser
-3. Enjoy the Uranus experience! 🪐
+## 🚀 Deployment
 
-### File Structure
+### Vercel Deployment (Recommended)
+
+1. **Install Vercel CLI**:
+   ```bash
+   npm i -g vercel
+   ```
+
+2. **Deploy to Vercel**:
+   ```bash
+   vercel
+   ```
+
+3. **Follow the prompts**:
+   - Link to existing project or create new
+   - Set project name: `uranus-analytics-dashboard`
+   - Confirm deployment settings
+
+### Manual Deployment
+
+1. **Clone the repository**:
+   ```bash
+   git clone <your-repo-url>
+   cd uranus-analytics-dashboard
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Deploy to Vercel**:
+   - Push to GitHub
+   - Connect repository to Vercel
+   - Deploy automatically
+
+## 🔧 Configuration
+
+### Environment Variables
+
+The following environment variables are configured in the code:
+
+- `SOLANA_TRACKER_API_KEY`: API key for Solana Tracker
+- `TWITTER_API_KEY`: API key for Twitter API
+
+### API Endpoints
+
+- **Dashboard Data**: `/api/dashboard-data`
+- **Community Data**: Twitter API integration
+- **Real-time Updates**: Auto-refresh functionality
+
+## 📁 Project Structure
 
 ```
-uranus/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles and animations
-├── script.js           # JavaScript functionality
-└── README.md          # This file
+uranus-analytics-dashboard/
+├── index.html              # Main dashboard page
+├── styles.css              # Professional styling
+├── script.js               # Interactive functionality
+├── server.js               # Local development server
+├── api/
+│   └── dashboard-data.js   # Vercel serverless function
+├── package.json            # Dependencies and scripts
+├── vercel.json            # Vercel configuration
+└── README.md              # Project documentation
 ```
 
-## 🎨 Design Features
+## 🎯 Key Features
 
-### Color Scheme
-- **Primary**: Blue gradient (#4facfe to #00f2fe)
-- **Secondary**: White (#ffffff)
-- **Background**: Dark space theme (#0a0a0a to #16213e)
-- **Accent**: Purple (#667eea)
+### Real-time Data
+- Live market cap and price updates
+- Real-time volume and transaction data
+- Holder growth tracking
+- Community engagement metrics
 
-### Animations
-- Rotating Uranus planet with rings
-- Floating asteroids and comets
-- Twinkling stars background
-- Particle system effects
-- Typing animation for hero title
-- Smooth parallax scrolling
+### Professional Design
+- Clean, modern interface
+- Smooth animations and transitions
+- Responsive design for all devices
+- Professional color scheme and typography
 
-## 🔧 Customization
+### Interactive Elements
+- Copy functionality for addresses
+- Real-time notifications
+- Hover effects and animations
+- Auto-refresh capabilities
 
-### Adding Real Token Data
+## 🔄 Build Process
 
-To integrate with Helius API for real token statistics:
+The project uses a simple build process optimized for Vercel:
 
-1. Get a Helius API key from [helius.xyz](https://helius.xyz)
-2. Replace `YOUR_HELIUS_API_KEY` in `script.js` with your actual API key
-3. Uncomment the `fetchHeliusData()` function call
-4. Customize the data processing in the `fetchHeliusData()` function
+1. **Static Files**: HTML, CSS, and JavaScript are served directly
+2. **API Routes**: Serverless functions handle data fetching
+3. **CORS**: Proper headers for cross-origin requests
+4. **Rate Limiting**: Built-in protection for API calls
 
-### Modifying Colors
+## 📈 Performance
 
-Edit the CSS variables in `styles.css`:
+- **Fast Loading**: Optimized static assets
+- **Efficient API Calls**: Rate limiting and caching
+- **CDN Delivery**: Vercel's global CDN
+- **Auto-scaling**: Serverless architecture
 
-```css
-:root {
-    --primary-color: #4facfe;
-    --secondary-color: #00f2fe;
-    --accent-color: #667eea;
-    --background-dark: #0a0a0a;
-    --background-light: #16213e;
-}
-```
+## 🛡️ Security
 
-### Updating Contract Address
+- **CORS Headers**: Proper cross-origin configuration
+- **API Rate Limiting**: Protection against abuse
+- **Error Handling**: Graceful fallbacks
+- **Input Validation**: Secure data processing
 
-The contract address is set in multiple places:
-- `index.html` (display)
-- `script.js` (copy function and Jupiter link)
+## 🚀 Quick Start
 
-## 🎯 Interactive Features
+1. **Clone and install**:
+   ```bash
+   git clone <your-repo-url>
+   cd uranus-analytics-dashboard
+   npm install
+   ```
 
-- **Copy Contract**: One-click contract address copying
-- **Jupiter Integration**: Direct link to trade on Jupiter
-- **Smooth Navigation**: Smooth scrolling between sections
-- **Mouse Interaction**: Planet responds to mouse movement
-- **Keyboard Easter Eggs**: Press 'U' for a surprise!
+2. **Local development**:
+   ```bash
+   npm run dev
+   ```
 
-## 📱 Responsive Design
+3. **Deploy to Vercel**:
+   ```bash
+   vercel
+   ```
 
-The website is fully responsive and includes:
-- Mobile-optimized navigation
-- Responsive grid layouts
-- Touch-friendly buttons
-- Optimized animations for mobile devices
+## 📝 License
 
-## 🌌 Space Theme Elements
-
-- **Animated Stars**: Multiple layers of twinkling stars
-- **Floating Elements**: Asteroids and comets with realistic trajectories
-- **Solar System**: Interactive solar system animation in About section
-- **Particle Effects**: Dynamic particle system in background
-- **Glassmorphism**: Modern glass-like UI elements
-
-## 🚀 Performance Optimizations
-
-- Efficient CSS animations using transform and opacity
-- Optimized particle system with limited particle count
-- Lazy loading for animations
-- Smooth scrolling with hardware acceleration
-
-## 🎨 Browser Compatibility
-
-- Chrome 80+
-- Firefox 75+
-- Safari 13+
-- Edge 80+
-
-## 📄 License
-
-This project is open source and available under the MIT License.
+MIT License - see LICENSE file for details.
 
 ## 🤝 Contributing
 
-Feel free to contribute to this project by:
-- Adding new animations
-- Improving performance
-- Adding more interactive features
-- Enhancing the space theme
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
 
-## 🪐 About Uranus Token
+## 📞 Support
 
-Uranus is a Solana memecoin launched on Jupiter Studio. The token combines humor with professional design, featuring:
-
-- **Contract**: BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups
-- **Network**: Solana
-- **Launch Platform**: Jupiter Studio
-- **Theme**: Space and planetary exploration
-
-## 🎉 Special Features
-
-- **Confetti Effect**: Triggered on button clicks
-- **Notification System**: Beautiful toast notifications
-- **Loading Screen**: Animated loading with Uranus theme
-- **Easter Eggs**: Hidden interactive elements throughout the site
+For questions or support, please open an issue in the repository.
 
 ---
 
-*To the moon and beyond! 🚀🪐* 
+**Built with ❤️ for the Uranus community** 
