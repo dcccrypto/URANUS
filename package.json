@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "build": "echo 'Static site - no build required'",
-    "vercel-build": "echo 'Static site deployment'"
+    "build": "echo 'No build step required - static files ready'"
   },
   "dependencies": {
     "cors": "^2.8.5",

@@ -346,11 +346,12 @@ function generateMockOHLCV(hours) {
     return data;
 }
 
-// Export for Vercel serverless functions
+// Export for Vercel serverless deployment
 module.exports = app;
 
-// Start server only if not in Vercel environment
-if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+// Start server only if running locally
+if (process.env.NODE_ENV !== 'production') {
+    const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {
         console.log(`🚀 Uranus Anal-lytics Dashboard server running on http://localhost:${PORT}`);
         console.log(`📊 Using Solana Tracker API for real data`);
