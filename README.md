@@ -51,41 +51,6 @@ A real-time analytics dashboard for the Uranus token powered by Solana Tracker A
    - Navigate to `http://localhost:3000`
    - The dashboard will automatically load real Uranus token data
 
-## 🚀 Deployment
-
-### Vercel Deployment
-
-This project is configured for easy deployment on Vercel:
-
-1. **Connect to Vercel**
-   ```bash
-   # Install Vercel CLI
-   npm i -g vercel
-   
-   # Deploy to Vercel
-   vercel
-   ```
-
-2. **Automatic Deployment**
-   - Push to GitHub
-   - Connect your repository to Vercel
-   - Automatic deployments on every push
-
-3. **Build Configuration**
-   - **Build Command**: `npm run build`
-   - **Output Directory**: Static files served directly
-   - **Node.js Version**: 18.x or higher
-
-### Manual Deployment
-
-```bash
-# Build the project
-npm run build
-
-# Deploy to any static hosting service
-# Files: index.html, styles.css, script.js, server.js
-```
-
 ## 🚀 API Endpoints
 
 ### Main Dashboard Data

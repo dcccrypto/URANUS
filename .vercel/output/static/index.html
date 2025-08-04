@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uranus Analytics Dashboard - Professional Blockchain Analytics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Professional blockchain anal-ytics about UrAnus">
+</head>
+<body>
+    <!-- Enhanced Floating Particles -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Enhanced Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">U</div>
+            <div class="loading-spinner"></div>
+            <h2>Initializing Anal-ytics</h2>
+            <p>Establishing secure connection to UrAnus</p>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard-section">
+        <div class="dashboard-container">
+            <header class="dashboard-header">
+                <h1 class="dashboard-title">UrAnus Anal-ytics Dashboard</h1>
+                <p class="dashboard-subtitle">Advanced blockchain anal-ytics</p>
+            </header>
+
+            <!-- Enhanced Contract Address Section -->
+            <section class="contract-address-section">
+                <div class="contract-address-card">
+                    <div class="contract-info">
+                        <span class="contract-label">Contract Address</span>
+                        <span class="contract-address" id="contract-address">BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups</span>
+                    </div>
+                    <button class="copy-contract-btn" onclick="copyContractAddress()">Copy Address</button>
+                </div>
+            </section>
+
+            <!-- Enhanced Top Stats Grid -->
+            <section class="top-stats-grid">
+                <article class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-label">Market Cap</div>
+                        <div class="stat-value" id="market-cap">Loading...</div>
+                    </div>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-label">Volume Flowing in UrAnus</div>
+                        <div class="stat-value" id="volume-24h">Loading...</div>
+                    </div>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-label">People in UrAnus</div>
+                        <div class="stat-value" id="total-holders">Loading...</div>
+                    </div>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-label">Price of URANUS</div>
+                        <div class="stat-value" id="current-price">Loading...</div>
+                        <div class="price-change" id="price-change">Loading...</div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Enhanced Analytics Grid -->
+            <section class="analytics-grid">
+                <article class="analytics-card">
+                    <header class="card-header">
+                        <div>
+                            <h3>UrAnus Performance Metrics</h3>
+                            <span class="subtitle">Real-time trading activity and market dynamics</span>
+                        </div>
+                        <button class="refresh-btn" onclick="refreshData()">Refresh Data</button>
+                    </header>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">Total Transactions</span>
+                            <span class="stat-value" id="total-transactions">Loading...</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Buy/Sell Distribution</span>
+                            <span class="stat-value" id="buy-sell-ratio">Loading...</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Volume Growth Rate</span>
+                            <span class="stat-value" id="volume-growth">Loading...</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Liquidity Pool</span>
+                            <span class="stat-value" id="liquidity">Loading...</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">1-Day Holder Growth</span>
+                            <span class="stat-value" id="holder-growth">Loading...</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Enhanced Top Wallets Section -->
+                <article class="analytics-card">
+                    <header class="card-header">
+                        <div>
+                            <h3>Top People in UrAnus</h3>
+                            <span class="subtitle">People with largest amount in UrAnus</span>
+                        </div>
+                    </header>
+                    <div class="leaderboard-container">
+                        <div class="leaderboard-list" id="leaderboard-list">
+                            <div class="no-data">Loading holder data...</div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Community Card Section -->
+            <section class="community-section">
+                <article class="community-card">
+                    <header class="card-header">
+                        <div>
+                            <h3>Community Metrics</h3>
+                            <span class="subtitle">Social media engagement and community growth</span>
+                        </div>
+                    </header>
+                    <div class="community-metrics">
+                        <div class="community-metric">
+                            <div class="metric-content">
+                                <div class="metric-label">Twitter Followers</div>
+                                <div class="metric-value" id="twitter-followers">Loading...</div>
+                                <div class="metric-growth" id="twitter-growth">Loading...</div>
+                            </div>
+                        </div>
+                        <div class="community-separator"></div>
+                        <div class="community-metric">
+                            <div class="metric-content">
+                                <div class="metric-label">X Community Members</div>
+                                <div class="metric-value" id="community-members">Loading...</div>
+                                <div class="metric-growth" id="community-growth">Loading...</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <!-- Enhanced Notification Container -->
+    <div id="notification-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
