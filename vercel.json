@@ -4,6 +4,18 @@
     {
       "src": "server.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.js",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -13,15 +25,10 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/server.js"
+      "dest": "/$1"
     }
   ],
-  "functions": {
-    "server.js": {
-      "maxDuration": 30
-    }
-  },
   "env": {
-    "HELIUS_API_KEY": "@helius-api-key"
+    "HELIUS_API_KEY": "@helius_api_key"
   }
 } 
