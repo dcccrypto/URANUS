@@ -1,14 +1,11 @@
 {
-  "name": "uranus-analytics-dashboard",
+  "name": "uranus-token-dashboard",
   "version": "1.0.0",
-  "description": "Professional Uranus Token Analytics Dashboard with Real-time Blockchain Data",
-  "main": "index.html",
+  "description": "Uranus Token Analytics Dashboard with Helius API Integration",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js",
-    "build": "echo 'Static files ready for deployment'",
-    "vercel-build": "echo 'Build completed successfully'",
-    "preview": "python -m http.server 8000"
+    "dev": "nodemon server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -18,23 +15,14 @@
   "devDependencies": {
     "nodemon": "^2.0.22"
   },
-  "engines": {
-    "node": "18.x"
-  },
   "keywords": [
     "uranus",
     "token",
     "dashboard",
-    "analytics",
-    "blockchain",
+    "helius",
     "solana",
-    "real-time",
-    "crypto"
+    "blockchain"
   ],
   "author": "Uranus Token Team",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/your-username/uranus-analytics-dashboard"
-  }
+  "license": "MIT"
 }
