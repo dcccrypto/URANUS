@@ -15,9 +15,5 @@
       "src": "/(.*)",
       "dest": "/$1"
     }
-  ],
-  "env": {
-    "SOLANA_TRACKER_API_KEY": "@solana_tracker_api_key",
-    "CONTRACT_ADDRESS": "@contract_address"
-  }
+  ]
 } 
