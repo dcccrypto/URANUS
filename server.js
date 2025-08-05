@@ -346,7 +346,7 @@ function generateMockOHLCV(hours) {
     return data;
 }
 
-// Export for Vercel serverless deployment
+// Export for Vercel serverless environment
 module.exports = app;
 
 // Start server only if running locally
